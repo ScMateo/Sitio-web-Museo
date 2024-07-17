@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../3D/Loader";
 
 const Volante2 = () => {
   const volante2 = useGLTF("./3DObjects/Volante2/scene.gltf");
@@ -41,9 +41,7 @@ const Volante2Canvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+        
         />
         <Volante2 />
       </Suspense>

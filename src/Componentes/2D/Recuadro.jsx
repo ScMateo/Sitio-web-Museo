@@ -6,20 +6,21 @@ function Recuadro(props) {
     const linkPath = `http://localhost:5173/${props.link}`;
 
     return (
-        <div className='w-full mx-10 my-10 md:my-50 max-w-screen-lg flex flex-col md:flex-row bg-slate-400 rounded-lg shadow-lg overflow-hidden'>
+        <div className='w-full sm:w-3/4 md:w-full mx-10 my-5 md:my-50 max-w-screen-lg flex flex-col 
+        md:flex-row bg-white shadow-lg overflow-hidden rounded-lg border-2 border-gray-300'>
             
             <div className='w-full md:w-4/7'>
                 <div className='text-center p-10 md:p-10 font-lato font-normal leading-6'>
-                    <p className='text-lg font-semibold'>{props.titulo}</p>
+                    <p className='text-3xl font-semibold'>{props.titulo}</p>
                     <p className='text-lg mt-2.5 pb-7'>{props.subtitulo}</p>
-                    <p className='text-base text-justify'>{props.parrafo}</p>
-                    {props.link && <a className='text-blue-500 text-left'  href={linkPath}>Leer más</a>}
+                    <p className='text-base text-justify pb-6 md:pb-4'>{props.parrafo}</p>
+                    {props.link && <a className='text-white text-left bg-green-600 border-gray-500 border-2 rounded-lg p-2' href={linkPath}>Conoce más</a>}
                 </div>
             </div>
             
             <div className='w-full md:w-3/7 flex items-center justify-center'>
                 <img
-                    className='h-full w-full object-cover p-7'
+                    className='max-w-full max-h-full object-contain md:p-5'
                     src={imagenPath} alt="Imagen" />
             </div>
 

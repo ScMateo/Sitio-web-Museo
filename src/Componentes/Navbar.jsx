@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const links = [
-  { link: '/', text: 'Principal', id: '1' },
-  { link: '/page', text: 'Page', id: '2' },
-  { link: '/contact', text: 'Contact', id: '3' },
-  { link: '/home', text: 'Home', id: '4' },
+  { link: '/', text: 'PRINCIPAL', id: '1' },
+  { link: '/page', text: 'PAGE', id: '2' },
+  { link: '/contact', text: 'CONTACT', id: '3' },
+  { link: '/home', text: 'HOME', id: '4' },
 ];
 
 const Navbar = () => {
@@ -64,12 +64,23 @@ const Navbar = () => {
             />
           )}
           {isMenuOpen && (
-            <AiOutlineClose
-              cursor='pointer'
-              size={24}
-              color='#f2f2f2'
-              onClick={() => setIsMenuOpen(false)}
-            />
+            <div className="flex flex-col items-center">
+              {links.map((l) => (
+                <Link
+                  className="text-white font-semibold text-xl my-3"
+                  to={l.link}
+                  key={l.id}
+                >
+                  {l.text}
+                </Link>
+              ))}
+              <AiOutlineClose
+                cursor='pointer'
+                size={24}
+                color='#f2f2f2'
+                onClick={() => setIsMenuOpen(false)}
+              />
+            </div>
           )}
         </div>
       )}

@@ -3,8 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../3D/Loader";
 
-const Volante = () => {
-  const volante = useGLTF("./3DObjects/Volante/scene.gltf");
+const Volante3 = () => {
+  const volante3 = useGLTF("./3DObjects/Volante3/scene.gltf");
   
   return (
     <mesh>
@@ -21,29 +21,29 @@ const Volante = () => {
       />
       <pointLight position={[10, 10, 10]} intensity={1} />
       <primitive
-        object={volante.scene}
-        scale={0.28}
-        position={[0.4, 0.5, 0]}
-        rotation={[0.01, -0.2, -0.1]}
+        object={volante3.scene}
+        scale={12}
+        position={[0, -3.5, 0]}
+        rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
   );
 };
 
-const VolanteCanvas = () => {
+const Volante3Canvas = () => {
   return (
     <Canvas
       frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 10], fov: 25 }}
+      camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
          
         />
-        <Volante />
+        <Volante3 />
       </Suspense>
       <Preload all />
     </Canvas>
@@ -51,5 +51,4 @@ const VolanteCanvas = () => {
 };
 
 
-export default VolanteCanvas;
-
+export default Volante3Canvas;

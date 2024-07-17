@@ -1,32 +1,21 @@
-import Contenedor from "../Componentes/Contenedor";
-import ContenedorInvert from "../Componentes/ContenedorInvert";
-import HojaLibro from "../Componentes/HojaLibro";
-import Informacion from "../Componentes/Informacion";
-import Card from "../Componentes/Card";
+import Contenedor from "../Componentes/2D/Contenedor";
+import ContenedorInvert from "../Componentes/2D/ContenedorInvert";
+import HojaLibro from "../Componentes/2D/HojaLibro";
+import Informacion from "../Componentes/2D/Informacion";
+import Card3D from "../Componentes/3D/Card3D";
+import Texto from "../Componentes/Text/Texto";
+import Map from "../Componentes/Map/Map";
 
-//Librerias del carrusel
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
+//Librerias Mapa
+import MapI from "../Componentes/Map/MapI";
 
 const Home = () => {
 
   const cards = [
-    { imagen: 'imagen1', link: 'Page', titulo: 'Curiosidades 1', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'imagen1', link: 'Page', titulo: 'Curiosidades 2', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'imagen1', link: 'Page', titulo: 'Curiosidades 3', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'imagen1', link: 'Page', titulo: 'Curiosidades 4', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'imagen1', link: 'Page', titulo: 'Curiosidades 5', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
+    { imagen: 'Volante', link: 'Popayan', titulo: 'Popayán', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
+    { imagen: 'Volante2', link: 'Suarez', titulo: 'Suarez', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
+    { imagen: 'Volante3', link: 'Timbiqui', titulo: 'Timbiqui', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
   ];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
   
   return (
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center'>
@@ -36,30 +25,20 @@ const Home = () => {
         </h1>
 
         <Contenedor
-          imagen='imagen1'
+          imagen='ceramoteca'
           titulo='Curiosidades sobre los pingüinos'
           subtitulo='Curiosidades pingüinos'
           parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
         />
 
         <Informacion
-          imagen='imagen1'
+          imagen='ceramoteca'
           titulo='Curiosidades sobre los pingüinos'
           parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,Curiosidades sobre los pingüinos,Curiosidades sobre los pingüinos,Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
         />
 
-        <div className='max-w-screen-lg mx-auto'>
-          <Slider {...settings}>
-            {cards.map((card, index) => (
-              <div key={index}>
-                <Card imagen={card.imagen} titulo={card.titulo} parrafo={card.parrafo} link={card.link}/>
-              </div>
-            ))}
-          </Slider>
-        </div>
-
         <ContenedorInvert
-          imagen='imagen1'
+          imagen='ceramoteca'
           titulo='Curiosidades sobre los pingüinos'
           subtitulo='Curiosidades pingüinos'
           parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
@@ -67,18 +46,47 @@ const Home = () => {
 
         <div className='flex justify-center w-full'>
           <HojaLibro
-            imagen='imagen1'
+            imagen='ceramoteca'
             titulo='Curiosidades sobre los pingüinos'
             parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos'
             link='Page'
           />
           <HojaLibro
-            imagen='imagen1'
+            imagen='ceramoteca'
             titulo='Curiosidades sobre los pingüinos'
             parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos'
             link='Page'
           />
         </div>
+
+        <div className='max-w-screen-lg mx-auto card-container'>
+          {cards.map((card, index) => (
+            <div key={index} className='w-1/3 p-1'>
+              <Card3D
+                titulo={card.titulo}
+                parrafo={card.parrafo}
+                link={card.link}
+                imagen={card.imagen}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className='flex justify-center w-full'>
+          <Map />
+          <Texto
+            titulo='AREAS ARQUEOLOGICAS DE COLOMBIA'
+            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
+            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
+            sobre los pingüinos, los Curiosidades sobre los pingüinos
+            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
+            sobre los pingüinos, los Curiosidades sobre los pingüinos
+            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
+            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+          />
+        </div>
+
+        <MapI />
 
      
 

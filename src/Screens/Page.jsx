@@ -1,5 +1,5 @@
-import Contenedor3D from "../Componentes/Contenedor3D";
-import Recuadro3D from "../Componentes/Recuadro3D";
+import Contenedor3D from "../Componentes/3D/Contenedor3D";
+import Recuadro3D from "../Componentes/3D/Recuadro3D";
 
 const Page = () => {
   return (
@@ -18,9 +18,10 @@ const Page = () => {
               titulo='Curiosidades sobre los pingüinos'
               subtitulo='Curiosidades pingüinos'
               parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
+              link='Popayan'
            />
         </div>
-        
+
       </div>
     </div>
   );
