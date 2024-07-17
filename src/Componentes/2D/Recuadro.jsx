@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function Recuadro(props) {
     
-    const imagenPath = `/imagenes/${props.imagen}.png`;
+    const imagenPath = `imagenes/${props.imagen}.png`;
     const linkPath = `http://localhost:5173/${props.link}`;
 
     return (
