@@ -1,6 +1,5 @@
 import Contenedor from "../Componentes/2D/Contenedor";
 import ContenedorInvert from "../Componentes/2D/ContenedorInvert";
-import HojaLibro from "../Componentes/2D/HojaLibro";
 import Informacion from "../Componentes/2D/Informacion";
 import Card3D from "../Componentes/3D/Card3D";
 import Texto from "../Componentes/Text/Texto";
@@ -43,21 +42,6 @@ const Home = () => {
           subtitulo='Curiosidades pingüinos'
           parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
         />
-
-        <div className='flex justify-center w-full'>
-          <HojaLibro
-            imagen='ceramoteca'
-            titulo='Curiosidades sobre los pingüinos'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos'
-            link='Page'
-          />
-          <HojaLibro
-            imagen='ceramoteca'
-            titulo='Curiosidades sobre los pingüinos'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos'
-            link='Page'
-          />
-        </div>
 
         <div className='max-w-screen-lg mx-auto card-container'>
           {cards.map((card, index) => (

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function Card(props) {
     const imagenPath = `/imagenes/${props.imagen}.png`;
-    const linkPath = `http://localhost:5173/${props.link}`;
 
     return (
         <div className='w-3/4 mx-10 md:mx-10 my-10 max-w-screen-lg flex flex-col md:flex-row 
@@ -23,8 +23,15 @@ function Card(props) {
                         <p className='text-base text-justify mt-2 pb-2 md:pb-4'>{props.parrafo}</p>
                     </div>
 
-                    {props.link && <a className='text-white text-left bg-green-600 border-gray-500 border-2 rounded-lg p-2' href={linkPath}>Conoce más</a>}
-                    
+                    {props.link && (
+                      <Link
+                        className='text-white text-left bg-green-600 border-gray-500 border-2 rounded-lg p-2'
+                        to={props.link}
+                      >
+                        Conoce más
+                      </Link>
+                    )}
+
                 </div>
             </div>
         </div>

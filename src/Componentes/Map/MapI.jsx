@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
 import L from 'leaflet';
@@ -66,6 +67,15 @@ const greyIcon = L.icon({
   shadowSize: [41, 41]
 });
 
+const blueIcon = L.icon({
+  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
 function MapI() {
     return (
         <div>
@@ -85,7 +95,7 @@ function MapI() {
                 </div>
                 
                 <div className='flex flex-col px-2 py-2'>
-                  <a href="http://localhost:5173/Calima"><strong>Calima</strong></a>
+                  <Link to='/Calima'><strong>Calima</strong></Link>
                   <p>
                     Descripcion,  Curiosidades sobre los pingüinos, los Curiosidades 
                     sobre los pingüinos Curiosidades 
@@ -105,7 +115,7 @@ function MapI() {
                 </div>
                 
                 <div className='flex flex-col px-2 py-2'>
-                  <a href="http://localhost:5173/Patia"><strong>Patía</strong></a>
+                  <Link to='/Patia'><strong>Patía</strong></Link>
                   <p>
                     Descripcion,  Curiosidades sobre los pingüinos, los Curiosidades 
                     sobre los pingüinos Curiosidades 
@@ -115,7 +125,7 @@ function MapI() {
               </Popup>
              </Marker>
 
-             <Marker position={[6.3637,-75.5606]}>
+             <Marker position={[6.3637,-75.5606]} icon={blueIcon}>
               <Popup className="custom-popup"> 
                 <div>
                   <img
@@ -125,7 +135,7 @@ function MapI() {
                 </div>
                 
                 <div className='flex flex-col px-2 py-2'>
-                  <a href="http://localhost:5173/TierraAdentro"><strong>Tierra Adentro</strong></a>
+                  <Link to='/TierraAdentro'><strong>Tierra Adentro</strong></Link>
                   <p>
                     Descripcion,  Curiosidades sobre los pingüinos, los Curiosidades 
                     sobre los pingüinos Curiosidades 
@@ -145,7 +155,7 @@ function MapI() {
                 </div>
                 
                 <div className='flex flex-col px-2 py-2'>
-                  <a href="http://localhost:5173/Popayan"><strong>Popayán</strong></a>
+                  <Link to='/Popayan'><strong>Popayán</strong></Link>
                   <p>
                     Descripcion,  Curiosidades sobre los pingüinos, los Curiosidades 
                     sobre los pingüinos Curiosidades 
@@ -165,7 +175,7 @@ function MapI() {
                 </div>
                 
                 <div className='flex flex-col px-2 py-2'>
-                  <a href="http://localhost:5173/Nariño"><strong>Nariño</strong></a>
+                  <Link to='/Nariño'><strong>Nariño</strong></Link>
                   <p>
                     Descripcion,  Curiosidades sobre los pingüinos, los Curiosidades 
                     sobre los pingüinos Curiosidades 
@@ -185,7 +195,7 @@ function MapI() {
                 </div>
                 
                 <div className='flex flex-col px-2 py-2'>
-                  <a href="http://localhost:5173/Tumaco"><strong>Tumaco</strong></a>
+                  <Link to='/Tumaco'><strong>Tumaco</strong></Link>
                   <p>
                     Descripcion,  Curiosidades sobre los pingüinos, los Curiosidades 
                     sobre los pingüinos Curiosidades 
@@ -205,7 +215,7 @@ function MapI() {
                 </div>
                 
                 <div className='flex flex-col px-2 py-2'>
-                  <a href="http://localhost:5173/Corinto"><strong>Corinto</strong></a>
+                  <Link to='/Corinto'><strong>Corinto</strong></Link>
                   <p>
                     Descripcion,  Curiosidades sobre los pingüinos, los Curiosidades 
                     sobre los pingüinos Curiosidades 
@@ -225,7 +235,7 @@ function MapI() {
                 </div>
                 
                 <div className='flex flex-col px-2 py-2'>
-                  <a href="http://localhost:5173/Quimbaya"><strong>Quimbaya</strong></a>
+                  <Link to='/Quimbaya'><strong>Quimbaya</strong></Link>
                   <p>
                     Descripcion,  Curiosidades sobre los pingüinos, los Curiosidades 
                     sobre los pingüinos Curiosidades 

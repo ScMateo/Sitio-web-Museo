@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function Recuadro(props) {
     
-    const imagenPath = `imagenes/${props.imagen}.png`;
-    const linkPath = `http://localhost:5173/${props.link}`;
+    const imagenPath = `/imagenes/${props.imagen}.png`;
 
     return (
         <div className='w-full sm:w-3/4 md:w-full mx-10 my-5 md:my-50 max-w-screen-lg flex flex-col 
@@ -14,7 +14,14 @@ function Recuadro(props) {
                     <p className='text-3xl font-semibold'>{props.titulo}</p>
                     <p className='text-lg mt-2.5 pb-7'>{props.subtitulo}</p>
                     <p className='text-base text-justify pb-6 md:pb-4'>{props.parrafo}</p>
-                    {props.link && <a className='text-white text-left bg-green-600 border-gray-500 border-2 rounded-lg p-2' href={linkPath}>Conoce más</a>}
+                    {props.link && (
+                      <Link
+                        className='text-white text-left bg-green-600 border-gray-500 border-2 rounded-lg p-2'
+                        to={props.link}
+                      >
+                        Conoce más
+                      </Link>
+                    )}
                 </div>
             </div>
             

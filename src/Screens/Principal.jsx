@@ -63,7 +63,7 @@ const Principal = () => {
 
         <div className='flex flex-col sm:flex-row justify-center items-center w-full'>
           <HojaLibro
-            imagen='textiles'
+            imagen='ceramoteca'
             titulo='TEXTILES EN LA ARQUEOLOGÍA'
             parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos'
             link='Page'
@@ -72,7 +72,7 @@ const Principal = () => {
             imagen='coleccion'
             titulo='LA COLECCIÓN DE VOLANTES DE HUSO'
             parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos'
-            link='Page'
+            link='Popayan'
           />
         </div>
 

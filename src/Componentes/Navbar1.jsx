@@ -40,17 +40,17 @@ const Navbar1 = () => {
           </Link>
         </li>
         <li className='my-4 py-4 hover:bg-green-600 hover:rounded' onClick={handleClick}>
-          <Link to='/page'>
+          <Link to='/Page'>
             <strong>Page</strong>
           </Link>
         </li>
         <li className='my-4 py-4 hover:bg-green-600 hover:rounded' onClick={handleClick}>
-          <Link to='/contact'>
+          <Link to='/Contact'>
             <strong>Contact</strong>
           </Link>
         </li>
         <li className='my-4 py-4 hover:bg-green-600 hover:rounded' onClick={handleClick}>
-          <Link to='/home'>
+          <Link to='/Home'>
             <strong>Home</strong>
           </Link>
         </li>
@@ -74,17 +74,17 @@ const Navbar1 = () => {
                 </Link>
               </li>
               <li className='hover:bg-slate-900 hover:rounded transition cursor-pointer' onClick={handleClick}>
-                <Link to='/page'>
+                <Link to='/Page'>
                   <strong>Page</strong>
                 </Link>
               </li>
               <li className='hover:bg-slate-900 hover:rounded transition cursor-pointer' onClick={handleClick}>
-                <Link to='/contact'>
+                <Link to='/Contact'>
                   <strong>Contact</strong>
                 </Link>
               </li>
               <li className='hover:bg-slate-900 hover:rounded transition cursor-pointer' onClick={handleClick}>
-                <Link to='/home'>
+                <Link to='/Home'>
                   <strong>Home</strong>
                 </Link>
               </li>
