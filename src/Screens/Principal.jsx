@@ -1,4 +1,5 @@
 import Recuadro from "../Componentes/2D/Recuadro";
+import Recuadro360 from "../Componentes/3D/Recuadro360";
 import HojaLibro from "../Componentes/2D/HojaLibro";
 import Texto from "../Componentes/Text/Texto";
 import Card from "../Componentes/2D/Card";
@@ -51,6 +52,16 @@ const Principal = () => {
   return (
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center'>
       <div className='min-h-600 flex flex-wrap items-center justify-center'>
+        <div className="mt-14 lg:mt-16 flex justify-center items-center w-full">
+          <Recuadro360
+            imagen='PanoramaInterior'
+            titulo='CERAMOTECA'
+            subtitulo='UNIVERSIDAD DEL CAUCA'
+            parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
+            link='Page'
+          />
+        </div>
+
         <div className="mt-14 lg:mt-16 flex justify-center items-center w-full">
           <Recuadro
             imagen='ceramoteca'

@@ -1,10 +1,16 @@
-import Map from "../Componentes/Map/Map";
-
+import Recuadro360 from '../Componentes/3D/Recuadro360';  // Importamos el componente Scene
 
 const Contact = () => {
     return (
       <div>
-        <Map />
+       <Recuadro360
+         imagen='PanoramaInterior'
+         titulo='CERAMOTECA'
+         subtitulo='UNIVERSIDAD DEL CAUCA'
+         parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
+         link='Page'
+       />
+       
       </div>
     )
   }
